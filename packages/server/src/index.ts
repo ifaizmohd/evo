@@ -1,6 +1,7 @@
 import '@babel/polyfill';
 import express, { Express, Request, Response } from 'express';
 import helmet from 'helmet';
+import Logger from '@evo/logger';
 
 const app: Express = express();
 
@@ -14,7 +15,7 @@ app.get('*', (req: Request, res: Response) => {
 const PORT: number = 5001;
 
 app.listen(PORT, () => {
-  console.log(
+  Logger.info(
     `Bismillah Ar-Rehman Ar-Rahim \n App is up and running on http://localhost:${PORT}`
   );
 });
