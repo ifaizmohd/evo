@@ -1,0 +1,11 @@
+{
+  "extends": ["../../eslintrc.json", "plugin:node/recommended"],
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "plugins": ["node"],
+  "rules": {
+    // Add specific ESLint rules for the server here
+  }
+}

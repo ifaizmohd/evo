@@ -1,0 +1,12 @@
+{
+  "extends": ["../../eslintrc.json", "plugin:react/recommended"],
+  "plugins": ["react"],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    // Package-specific ESLint rules for the client
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error"
+  }
+}
