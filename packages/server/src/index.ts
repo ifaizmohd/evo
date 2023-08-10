@@ -2,13 +2,16 @@ import '@babel/polyfill';
 import express, { Express, Request, Response } from 'express';
 import helmet from 'helmet';
 import Logger from '@evo/logger';
+import { getRenderableComponent } from '@evo/core/src/renderer/renderer';
 
 const app: Express = express();
 
 // Middlewares.
 app.use(helmet());
 
-app.get('*', (req: Request, res: Response) => {
+app.get('*', async (req: Request, res: Response) => {
+  const { Component, props } = await getRenderableComponent(req.path);
+  Logger.debug('Componets - ', Component);
   res.status(200).json({ message: 'Hello World!' });
 });
 

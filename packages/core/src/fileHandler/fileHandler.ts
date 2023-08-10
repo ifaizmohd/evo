@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs/promises';
 import { removeExtensionFromFilename } from '../utils/utils';
 
-const pagesDirPath = '@evo/client/pages';
+const pagesDirPath = '../packages/client/src/pages';
 
 export async function searchFilesInDirectory(pathName: string) {
   try {

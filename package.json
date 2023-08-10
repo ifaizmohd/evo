@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "dev:build-server": "yarn workspace @evo/server run dev:build",
-    "dev:start-server": "yarn workspace @evo/server run start",
+    "dev:start-server": "nodemon --watch dist --exec \"node dist/bundle.js\"",
     "lint-server": "eslint packages/server",
     "lint-client": "eslint packages/client",
     "lint": "npm run lint-server && npm run lint-client",
@@ -17,6 +17,7 @@
     "format": "npm run format-server && npm run format-client"
   },
   "dependencies": {
+    "axios": "^1.4.0",
     "typescript": "^5.1.6"
   },
   "workspaces": [
@@ -35,6 +36,7 @@
     "eslint": "^8.46.0",
     "eslint-plugin-node": "^11.1.0",
     "jest": "^29.6.2",
+    "nodemon": "^3.0.1",
     "prettier": "^3.0.1",
     "ts-loader": "^9.4.4",
     "webpack": "^5.88.2",

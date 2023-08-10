@@ -4,8 +4,8 @@
     "noImplicitAny": true,
     "module": "ESNext",
     "target": "es5",
-    "allowJs": true,
     "jsx": "react",
+    "allowJs": true,
     "moduleResolution": "node",
     "esModuleInterop": true
   }
